@@ -1054,7 +1054,12 @@
                     </tbody>
                 </table>
             </div>
-<div class="status-note">
+            <div class="status-note">
+                <i class="fas fa-exclamation-circle"></i>
+                <strong>Note:</strong> Kaushal Rupesh Vaidya <strong>We observed regular submission. KEEP IT UP!! You will be charged only RS 10 for late submission for sept 2026</strong>.
+            </div>
+
+             <div class="status-note">
                 <i class="fas fa-exclamation-circle"></i>
                 <strong>Note:</strong> Kaushal Rupesh Vaidya <strong>Very good performance</strong> You are regularly submitting your work. We understand that you are also learning what is submitted as there can be a surprise telephonic call to check your progesss.
             </div>
@@ -1273,7 +1278,7 @@ No documentary proof of enrollment or participation in such activities is requir
     // Hindi (201)
     { subject: 'Hindi', book: 'NCERT Veena', examLesson: 'L1 - कविता की बात, सोलचए और लिलिए, समझ और अनुभव, लचत्रों की भाषा, अनुमान और कल्पना, भाषा की बात', tmaLesson: 'None', submissionType: 'Back Q & A', dueDate: '2026-09-07', status: 'approved', driveLink: '', refLink: 'https://ncert.nic.in/textbook.php', startTime: '01:00', endTime: '23:59', totalMarks: '10', marksGained: '10' },
     { subject: 'Hindi', book: 'NCERT Veena', examLesson: 'L2 - बातचीत के लिए, पाठ के भीतर, सोलचए और लिलिए, भाषा की बात, मिलान कीमिए, विभिन्न ध्वनियाँ', tmaLesson: 'None', submissionType: 'Back Q & A', dueDate: '2026-09-08', status: 'approved', driveLink: '', refLink: 'https://ncert.nic.in/textbook.php', startTime: '01:00', endTime: '23:59', totalMarks: '10', marksGained: '10' },
-    { subject: 'Hindi', book: 'NCERT Veena', examLesson: 'L3 - बातचीत के लिए, पाठ के भीतर, भाषा की बात', tmaLesson: 'None', submissionType: 'Back Q & A', dueDate: '2026-09-09', status: 'pending', driveLink: '', refLink: 'https://ncert.nic.in/textbook.php', startTime: '01:00', endTime: '23:59', totalMarks: '10', marksGained: '' },
+    { subject: 'Hindi', book: 'NCERT Veena', examLesson: 'L3 - बातचीत के लिए, पाठ के भीतर, भाषा की बात', tmaLesson: 'None', submissionType: 'Back Q & A', dueDate: '2026-09-09', status: 'approved', driveLink: '', refLink: 'https://ncert.nic.in/textbook.php', startTime: '01:00', endTime: '23:59', totalMarks: '10', marksGained: '10' },
     { subject: 'Hindi', book: 'NCERT Veena', examLesson: 'L4 - बातचीत के लिए, कविता के आधार पर, अनुमान और कल्पना, भाषा की बात', tmaLesson: 'None', submissionType: 'Back Q & A', dueDate: '2026-09-10', status: 'pending', driveLink: '', refLink: 'https://ncert.nic.in/textbook.php', startTime: '01:00', endTime: '23:59', totalMarks: '10', marksGained: '' },
     { subject: 'Hindi', book: 'NCERT Veena', examLesson: 'Read L1, L2, L3, L3, L4 Make your own Test of 50 Marks and submit', tmaLesson: 'None', submissionType: 'Back Q & A', dueDate: '2026-09-11', status: 'pending', driveLink: '', refLink: 'https://ncert.nic.in/textbook.php', startTime: '01:00', endTime: '23:59', totalMarks: '10', marksGained: '' },
 
@@ -1910,7 +1915,7 @@ No documentary proof of enrollment or participation in such activities is requir
                 if (isOverdueStatus && (item.status === 'pending' || item.status === 'rejected')) {
                     actionBtn.href = '#';
                     actionBtn.className = 'subject-action-btn overdue-pay-btn';
-                    actionBtn.innerHTML = `<i class="fas fa-credit-card"></i> Pay ₹1500 & Submit`;
+                    actionBtn.innerHTML = `<i class="fas fa-credit-card"></i> Pay ₹10 & Submit`;
                     const statusText = item.status === 'rejected' ? 'REJECTED' : 'OVERDUE';
                     actionBtn.addEventListener('click', function(e) {
                         e.preventDefault();
@@ -1921,7 +1926,7 @@ No documentary proof of enrollment or participation in such activities is requir
                             `Due Date: ${item.dueDate}\n` +
                             `Status: ${item.status.toUpperCase()}\n` +
                             (hasTime && item.startTime && item.endTime ? `Time Window: ${item.startTime} - ${item.endTime}\n` : '') +
-                            `\nA late fee of ₹1500 is required to resubmit.\n\nClick OK to pay.`
+                            `\nA late fee of ₹10 is required to resubmit.\n\nClick OK to pay.`
                         );
                         if (confirmed) {
                             window.open(OVERDUE_PAYMENT_URL, '_blank');
@@ -1939,7 +1944,7 @@ No documentary proof of enrollment or participation in such activities is requir
                 else if (isTimeExpired && (item.status === 'pending' || item.status === 'rejected')) {
                     actionBtn.href = '#';
                     actionBtn.className = 'subject-action-btn time-expired-btn';
-                    actionBtn.innerHTML = `<i class="fas fa-credit-card"></i> Pay ₹1500 & Submit`;
+                    actionBtn.innerHTML = `<i class="fas fa-credit-card"></i> Pay ₹10 & Submit`;
                     actionBtn.addEventListener('click', function(e) {
                         e.preventDefault();
                         const confirmed = confirm(
@@ -1949,7 +1954,7 @@ No documentary proof of enrollment or participation in such activities is requir
                             `Due Date: ${item.dueDate}\n` +
                             `Status: ${item.status.toUpperCase()}\n` +
                             (hasTime && item.startTime && item.endTime ? `Time Window: ${item.startTime} - ${item.endTime}\n` : '') +
-                            `\nA late fee of ₹1500 is required.\n\nClick OK to pay.`
+                            `\nA late fee of ₹10 is required.\n\nClick OK to pay.`
                         );
                         if (confirmed) {
                             window.open(OVERDUE_PAYMENT_URL, '_blank');
@@ -2195,12 +2200,12 @@ No documentary proof of enrollment or participation in such activities is requir
         console.log('✅ Dashboard ready. Credentials: Kaushal123 / Kaushal@123');
         console.log('📊 Total rows: ' + tableData.length);
         console.log('📊 Updated Status behavior:');
-        console.log('  - Pending + Overdue: Show Pay ₹1500 button, Reference: View');
-        console.log('  - Rejected + Overdue: Show Pay ₹1500 button, Reference: View');
+        console.log('  - Pending + Overdue: Show Pay ₹10 button, Reference: View');
+        console.log('  - Rejected + Overdue: Show Pay ₹10 button, Reference: View');
         console.log('  - Pending + Not Overdue: Show Submit button + Reference: View');
         console.log('  - Rejected + Not Overdue: Show Submit button + Reference: View');
         console.log('  - Time Active: Show Submit Now button + Reference: View');
-        console.log('  - Time Expired: Show Pay ₹1500 button, Reference: View');
+        console.log('  - Time Expired: Show Pay ₹10 button, Reference: View');
         console.log('  - Submitted: Show View File button + Reference: View');
         console.log('  - Approved: Show View File button + Reference: View');
     })();
